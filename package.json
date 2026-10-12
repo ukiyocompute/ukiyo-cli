@@ -1,0 +1,20 @@
+{
+  "name": "@ukiyo/cli",
+  "version": "0.2.5",
+  "description": "Ukiyo CLI: rent GPUs from your terminal or AI agent.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "bin": { "ukiyo": "dist/bin.js" },
+  "engines": { "node": ">=22" },
+  "repository": { "type": "git", "url": "https://github.com/ukiyocompute/ukiyo-cli.git" },
+  "homepage": "https://docs.u-kiyo.ai/connect/cli",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test \"src/**/*.test.ts\"",
+    "release": "node scripts/build-release.mjs"
+  },
+  "dependencies": { "commander": "14.0.3" },
+  "devDependencies": { "@types/node": "24.13.3", "esbuild": "0.28.1", "tsx": "4.23.1", "typescript": "5.9.3" }
+}
